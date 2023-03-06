@@ -12,9 +12,12 @@ function Login() {
     console.log(values);
     if (items.username === values.username && items.password === values.password) {
       navigate("/header")
+      notification.success({
+        message: "Login Successfully"
+      })
     } else {
       notification.error({
-        message: "user doest not exist"
+        message: "User doest not exist"
       })
       navigate("/sign-up")
     }

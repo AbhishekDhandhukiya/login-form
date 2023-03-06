@@ -70,7 +70,7 @@ const List = () => {
   const handleEdit = (items, index) => {
     setIsModalOpen(true);
     form.setFieldsValue(items);
-    setImage(items.profile);
+    setImage(items?.profile);
     setEdit(true);
     setEditId(items.id);
     setIndex(index);
@@ -95,7 +95,7 @@ const List = () => {
       render: (_, items) => (
         <Image
           src={items?.profile}
-          className="image"
+          className="image" 
           alt="image"
         />
       ),
@@ -134,45 +134,7 @@ const List = () => {
         <Button type="primary" onClick={showModal} className="btn">
           AddUser
         </Button>
-        <Table columns={columns} dataSource={data} />;
-        {/* <table>
-          <thead>
-            <tr>
-              <th>Profile</th>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Username</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.map((items, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    <img
-                      src={items?.profile}
-                      className="image"
-                      alt="image"
-                      onChange={(e) => checkProfile(e)}
-                    />
-                  </td>
-                  <td>{items?.firstname}</td>
-                  <td>{items?.lastname}</td>
-                  <td>{items?.username}</td>
-                  <td>
-                    <button onClick={() => handleEdit(items, index)}>
-                      Edit
-                    </button>
-                  </td>
-                  <td>
-                    <button onClick={() => handleDelete(index)}>Delete</button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table> */}
+        <Table columns={columns} dataSource={data} />
       </div>
       <Modal
         footer={false}
