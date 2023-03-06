@@ -1,0 +1,32 @@
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(229, 222, 213);
+    height: 100vh;
+}
+.input{
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
+}
+.login-forget{
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+.login-button{
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+ .ant-form-item-control-input-content{
+    display: flex;
+    justify-content: space-between;
+ }

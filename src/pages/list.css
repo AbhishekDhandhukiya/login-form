@@ -1,0 +1,27 @@
+.profile {
+    width: 110px;
+    height: 110px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: relative;
+}
+
+.input-btn {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 20PX;
+}
+.image{
+    max-width: 150px;
+    max-height: 150px;
+}
+tr{
+    font-size: 20px;
+}
