@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Header from '../header/header';
+import React, { useState } from "react";
+import Header from "../header/header";
 
 function List() {
   const [value, setValue] = useState(0);
@@ -32,46 +32,51 @@ function List() {
       num.push(i);
       setDo_Loop(num);
       i++;
-    } while (i < value)
+    } while (i < value);
   };
 
   const handleLoop = () => {
     handleFor();
     handleWhile();
     handleDoWhile();
-  }
+  };
 
-  const for_map = for_Loop.length && for_Loop?.map((item, index) => {
-    return (
-      <div key={index}>{item}</div>
-      )
-    })
-    
-  const while_map = while_Loop.length && while_Loop?.map((item, index) => {
-    return (
-      <div key={index}>{item}</div>
-    )
-  })
-
-  const do_while_map = do_Loop.length && do_Loop?.map((item, index) => {
-    return (
-      <div key={index}>{item}</div>
-    )
-  })
   return (
-    <div className='list-page'>
+    <div className="list-page">
       <Header />
       <h1>Abhishek Dhandhukiya</h1>
       <input
         type="number"
-        onChange={(e) => { setValue(e.target.value) }}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
       />
       <button onClick={() => handleLoop()}>try it!</button>
-      {for_map}<br/>
-      {while_map}<br/>
-      {do_while_map}
+ 
+      <div className="loop">
+        <div className="space">
+          {for_Loop.length &&
+            for_Loop?.map((item, index) => {
+              return <div key={index}>{item}</div>;
+            })}
+        </div>
+
+        <div className="space">
+          {while_Loop.length &&
+            while_Loop?.map((item, index) => {
+              return <div key={index}>{item}</div>;
+            })}
+        </div>
+
+        <div className="space">
+          {do_Loop.length &&
+            do_Loop?.map((item, index) => {
+              return <div key={index}>{item}</div>;
+            })}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default List;

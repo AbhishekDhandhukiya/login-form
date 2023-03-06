@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+.loop{
+  display: flex;
+}
+.space{
+  padding: 20px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
