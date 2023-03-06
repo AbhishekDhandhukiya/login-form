@@ -4,7 +4,7 @@ import Header from "../header/header";
 import { Button, Form, Input, Modal } from "antd";
 import moment from "moment/moment";
 import "./list.css";
-import { Space, Table, Image } from "antd";
+import { Space, Table } from "antd";
 
 const List = () => {
   const [form] = Form.useForm();
@@ -93,11 +93,7 @@ const List = () => {
       dataIndex: "profile",
       key: "profile",
       render: (_, items) => (
-        <Image
-          src={items?.profile}
-          className="image" 
-          alt="image"
-        />
+        <img src={items?.profile} className="image" alt="img" />
       ),
     },
     {
@@ -163,11 +159,12 @@ const List = () => {
               type="file"
               className="input-btn"
               onChange={(e) => checkProfile(e)}
+              name="setImage"
             />
             {image && (
               <img
                 src={image}
-                alt="iamge"
+                alt="setImage"
                 height="110px"
                 width="110px"
                 style={{ borderRadius: "50%" }}
