@@ -5,7 +5,7 @@ import './header.css';
 
 function Header() {
 
-    const navigate = useNavigate();
+    const navigate  = useNavigate();
     const logout = () => {
         localStorage.clear()
         navigate("/");
