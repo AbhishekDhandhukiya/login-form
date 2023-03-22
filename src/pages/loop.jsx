@@ -52,7 +52,7 @@ function List() {
         }}
       />
       <button onClick={() => handleLoop()}>try it!</button>
- 
+
       <div className="loop">
         <div className="space">
           {for_Loop.length &&
